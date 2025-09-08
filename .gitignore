@@ -1,0 +1,27 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+.venv/
+venv/
+
+# FAISS / índices y binarios pesados
+indice_faiss/
+*/indice_faiss/
+*.faiss
+*.pkl
+
+# Notebooks/outputs
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# SO/Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Datos procesados
+processed_files.json
