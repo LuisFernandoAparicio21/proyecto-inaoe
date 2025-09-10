@@ -4,7 +4,7 @@ Un sistema de preguntas y respuestas basado en RAG (Retrieval-Augmented Generati
 
 ## 🚀 Características
 
-- **Múltiples modelos de IA**: Soporte para Google Gemini, Groq, y Ollama
+- **Múltiples modelos de IA**: Mistral, Gemini
 - **Búsqueda semántica**: Encuentra información relevante en documentos PDF
 - **Interfaz web intuitiva**: Aplicación Streamlit fácil de usar
 - **Configuración flexible**: Ajusta parámetros según tus necesidades
@@ -55,10 +55,7 @@ streamlit run app.py
 | Modelo | Proveedor | Tipo | Costo | Velocidad | Precisión |
 |--------|-----------|------|-------|-----------|-----------|
 | gemini-1.5-flash | Google | API Remota | Gratis | Rápido | Alta |
-| llama3-8b-8192 | Groq | API Remota | Pago | Muy rápido | Alta |
-| gemma-7b-it | Groq | API Remota | Pago | Rápido | Media-Alta |
-| qwen3:4b | Ollama | Local | Gratis | Lento | Media |
-| llama3.2:1b | Ollama | Local | Gratis | Rápido | Media |
+
 
 ### Parámetros Ajustables
 
@@ -98,50 +95,7 @@ proyecto_rag_inaoe/
 
 ## 🐛 Solución de Problemas
 
-### Error: "Base de datos no encontrada"
-```bash
-cd src
-python procesar_docs.py
-```
 
-### Error: "Ollama no está ejecutándose"
-```bash
-ollama serve
-```
-
-### Error: "API keys no configuradas"
-Crear archivo `.streamlit/secrets.toml` con las claves correspondientes.
-
-### Error: "Módulo no disponible"
-```bash
-pip install langchain-groq
-```
-
-### Error: "Timeout"
-- Usar un modelo más rápido
-- Reducir el número de documentos consultados
-- Hacer preguntas más específicas
-
-## 🔄 Mejoras Recientes
-
-### Versión 2.0 - Correcciones Implementadas
-
-1. **Corrección del problema L1**: Mejorada la distribución de columnas en la interfaz
-2. **Detección automática de GPU**: Uso de CUDA cuando está disponible
-3. **Validación de preguntas**: Verificación de que las preguntas sean apropiadas
-4. **Métricas de rendimiento**: Tiempo de respuesta y estadísticas
-5. **Manejo robusto de errores**: Mensajes informativos y soluciones
-6. **Configuración avanzada**: Parámetros ajustables en tiempo real
-7. **Verificación de servicios**: Comprobación automática de Ollama y APIs
-8. **Interfaz mejorada**: Mejor UX con botones de limpieza y ejemplos
-
-### Problemas Corregidos
-
-- ❌ **Línea 134**: `col1, col2, col3 = st.columns([1, 1, 1])` → ✅ Distribución mejorada
-- ❌ **Falta de validación**: → ✅ Validación de preguntas implementada
-- ❌ **Manejo de errores básico**: → ✅ Sistema robusto de manejo de errores
-- ❌ **Configuración fija**: → ✅ Parámetros ajustables
-- ❌ **Sin métricas**: → ✅ Métricas de rendimiento en tiempo real
 
 ## 🤝 Contribuciones
 
